@@ -25,4 +25,11 @@ RUN git clone https://github.com/JetBrains/JetBrainsMono.git
 RUN sh -c "$(curl -fsSL https://git.io/zinit-install)"
 RUN echo "zinit light zdharma/fast-syntax-highlighting\nzinit light zsh-users/zsh-autosuggestions\nzinit light zsh-users/zsh-completions" >> /root/.zshrc
 
+# Installing k6
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C5AD17C747E3415A3642D57D77C6C491D6AC1D69
+RUN echo "deb https://dl.k6.io/deb stable main" | tee /etc/apt/sources.list.d/k6.list
+RUN apt-get update
+RUN apt-get install k6 -y
+
+
 CMD ["zsh"]
