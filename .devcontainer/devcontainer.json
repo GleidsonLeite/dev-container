@@ -1,0 +1,9 @@
+{
+  "name": "environment",
+  "dockerFile": "Dockerfile",
+  "appPort": [],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/zsh",
+    "editor.fontFamily": "JetBrains Mono",
+  }
+}
